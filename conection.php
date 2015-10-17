@@ -1,7 +1,7 @@
 ﻿<?php 
-	class Conection{
+	class Conection{//class name
 		private $db;
-		private $query; 
+		private $query; //propertie
 		public function __construct($motor,$server,$user,$pass,$dbname){
 			$this->db = new PDO("$motor:dbname=$dbname;host=$server","$user","$pass");
 			
