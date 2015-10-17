@@ -1,6 +1,8 @@
 <?php require_once("conection.php");
 class Api{
 	//$obj = new Conection("mysql","localhost","root","","galileosupermercado");
+	
+	
 	private $db1; //
 	private $data;
 	private $result;
