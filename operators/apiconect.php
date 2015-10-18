@@ -8,5 +8,7 @@ $obj->querySend("articulo","nombre,precioCosto","");
 $obj->convertJson();
 $obj->printJson();
 
+
+
 ?>
 

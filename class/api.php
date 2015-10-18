@@ -23,6 +23,7 @@ class Api{
 		echo "data=".$this->json.";";			
 	}
 }
+
 /*way to use*/
 //$obj = new Api("mysql","localhost","root","","galileosupermercado");
 //echo "<br />conecta";
