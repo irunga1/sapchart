@@ -3,8 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
+	<script type="text/javascript" src="http://localhost/apirest/public/js/jquery.js"></script>
+	<script type="text/javascript" src="http://localhost/apirest/public/js/mustache.js"></script>	
+	<script type="text/javascript" src="http://localhost/apirest/public/js/core.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<link rel="stylesheet" href="http://localhost/apirest/public/css/bootstrap.css" />
 </head>
 <body>
-	
+
+	<header class="scHeader"></header>
+	<section class="scSection">
+		<div id="scContent">
+		
+		</div>
+		<div id="piechart" style="width: 900px; height: 500px;"></div>
+
+
+	</section>
+	<footer class="scFooter"></footer>
+		<script type="text/javascript">
+			google.load("visualization", "1", {packages:["corechart"]});
+			google.setOnLoadCallback(drawChart);
+			function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+					['Task', 'Hours per Day'],
+					['Detergente',     7],
+					['Incaparina',      7],
+					['Arroz',  7],
+					['Jabon Liquido', 9.5]
+					
+					]);
+
+				var options = {
+				title: 'Precios Costo'
+				};
+
+				var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+				chart.draw(data, options);
+			}
+			
+		</script>
 </body>
 </html>

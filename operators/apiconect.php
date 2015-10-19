@@ -6,9 +6,9 @@ require_once("../class/api.php");
 $obj = new Api("mysql","localhost","root","","galileosupermercado");
 $obj->querySend("articulo","nombre,precioCosto","");
 $obj->convertJson();
-$obj->printJson();
+$obj->printJson(); 
 
-
+//echo"dsfasdfas";
 
 ?>
 

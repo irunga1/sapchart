@@ -19,8 +19,9 @@ class Api{
 		$this->json = json_encode($this->result);
 	}
 	public function printJson(){
-		//header('Content-Type: application/json');
-		echo "data=".$this->json.";";			
+		
+		/* echo "data=".$this->json.";";			 */
+		echo '{"info":'.$this->json."}";			
 	}
 }
 
