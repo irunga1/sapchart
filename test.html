@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="http://localhost/apirest/public/js/jquery.js"></script>
+	<script type="text/javascript" src="http://localhost/apirest/public/js/mustache.js"></script>
+	<link rel="stylesheet" href="http://localhost/apirest/public/css/bootstrap.css" />
+</head>
+<body>
+	<div class="scContent"></div>
+	
+	<script type="text/javascript">
+		data = '{"nombre1":"juan","info":[{"nombre":"Detergente","0":"Detergente","precioCosto":"7.00","1":"7.00"},{"nombre":"Incaparina","0":"Incaparina","precioCosto":"7.00","1":"7.00"},{"nombre":"Arroz","0":"Arroz","precioCosto":"7.00","1":"7.00"},{"nombre":"Jabon Liquido","0":"Jabon Liquido","precioCosto":"9.50","1":"9.50"}]}' 
+		template ='{{nombre1}}{{#info}}---{{precioCosto}}---{{/info}}';
+		render = Mustache.render(template,data);
+		$(".scContent").html(render)
+	</script>
+</body>
+</html>
